@@ -1,0 +1,6 @@
+name: 'PR to Discord'
+author: 'ninju'
+description: 'Send a message to Discord when a PR is opened or reopened'
+runs:
+  using: 'node20'
+  main: 'src/index.js'
