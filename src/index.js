@@ -1,8 +1,6 @@
 import core from '@actions/core';
 import github from '@actions/github';
 import fetch from 'node-fetch';
-import {config} from 'dotenv';
-config();
 const payload = github.context.payload;
 
 const message = {
@@ -27,7 +25,7 @@ const message = {
     ]
 }
 
-fetch(process.env.WEBHOOK_URL, {
+fetch(core.getInput('webhook_url'), {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json',

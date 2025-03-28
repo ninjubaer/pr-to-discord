@@ -1,6 +1,10 @@
 name: 'PR to Discord'
 author: 'ninju'
 description: 'Send a message to Discord when a PR is opened or reopened'
+inputs:
+  webhook_url:
+    description: 'The Discord webhook URL to send the message to'
+    required: true
 runs:
   using: 'node20'
   main: 'src/index.js'
