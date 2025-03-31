@@ -4,6 +4,7 @@ import fetch from 'node-fetch';
 const payload = github.context.payload;
 
 const message = {
+    content: core.getInput('content') || 'No content',
     embeds: [{
         title: payload?.pull_request?.title || 'No title',
         url: payload?.pull_request?.html_url || 'https://github.com/natroteam/natromacrodev/pulls',
