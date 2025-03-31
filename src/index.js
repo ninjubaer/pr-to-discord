@@ -3,6 +3,7 @@ import github from '@actions/github';
 import fetch from 'node-fetch';
 const payload = github.context.payload;
 
+console.log('Payload:', payload);
 const message = {
     embeds: [{
         title: payload?.pull_request?.title || 'No title',
